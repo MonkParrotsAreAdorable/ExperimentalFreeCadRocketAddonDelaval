@@ -221,6 +221,6 @@ class _DeLavalNozzle:
         QtGui.QMessageBox.information(None, "De Laval Nozzle", "Pressure choke systems have not been implemented.\n\nThe generated nozzle is a solid body , so users can boolean substract it from another body on their own.\n\nThis is only a proof of concept to demonstrate the learning capabilities of my group and I\n\nDocumentation can be provided upon request")
         panel = DeLavalNozzleTaskPanel()
         FreeCADGui.Control.showDialog(panel)
-#    def IsActive(self):
-#       return FreeCAD.ActiveDocument is not Nones
+    def IsActive(self):
+       return FreeCAD.ActiveDocument is not None
 FreeCADGui.addCommand('De_Laval_Nozzle', _DeLavalNozzle())
